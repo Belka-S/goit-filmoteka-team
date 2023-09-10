@@ -28,6 +28,7 @@ const qeueBTN = document.querySelector("[data-action='queue']");
 watchBTN.addEventListener('click', watchHandler);
 qeueBTN.addEventListener('click', qeueHandler);
 refs.filmCardListEl.addEventListener('click', createFilmModal);
+
 function watchHandler() {
   const loaded = load('STATE');
   console.log('loaded: ', loaded);
@@ -35,8 +36,10 @@ function watchHandler() {
   const watchedMV = loaded.user.movies.watched;
   console.log('watchedMV: ', watchedMV);
 
-  gallery.insertAdjacentHTML('afterbegin', createbigCardMarkup(watchedMV));
+  // gallery.insertAdjacentHTML('afterbegin', createbigCardMarkup(watchedMV));
+  gallery.innerHTML = createbigCardMarkup(watchedMV);
 }
+
 function qeueHandler() {
   const loaded = load('STATE');
   console.log('loaded: ', loaded);
@@ -44,7 +47,8 @@ function qeueHandler() {
   const qeueMV = loaded.user.movies.qeue;
   console.log('watchedMV: ', qeueMV);
 
-  gallery.insertAdjacentHTML('afterbegin', createbigCardMarkup(qeueMV));
+  // gallery.insertAdjacentHTML('afterbegin', createbigCardMarkup(qeueMV));
+  gallery.innerHTML = createbigCardMarkup(qeueMV);
 }
 
 export function createbigCardMarkup(array) {
