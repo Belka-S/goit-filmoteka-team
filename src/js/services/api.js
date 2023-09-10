@@ -2,14 +2,14 @@ import axios from 'axios';
 
 import { setLoader, removeLoader } from './loader';
 
-const { TMDB_API_KEY } = process.env;
+const baseUrl = process.env.TMDB_API_KEY;
 const BODY_SELECTOR = 'body';
 
 async function getPopMovies(page) {
   try {
     setLoader(BODY_SELECTOR);
     const respons = await axios.get(
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=${TMDB_API_KEY}&page=${page}&include_adult=false`
+      `https://api.themoviedb.org/3/trending/movie/day?api_key=${baseUrl}&page=${page}&include_adult=false`
     );
     const data = await respons.data;
     return data;
@@ -24,7 +24,7 @@ async function getMovieByKeyword(keyword, page) {
   try {
     setLoader(BODY_SELECTOR);
     const respons = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${keyword}&page=${page}&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=${baseUrl}&query=${keyword}&page=${page}&include_adult=false`
     );
     const data = await respons.data;
     // console.log(data);
@@ -40,7 +40,7 @@ async function getMovieDetails(movieId) {
   try {
     setLoader(BODY_SELECTOR);
     const respons = await axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${baseUrl}&language=en-US`
     );
     const data = await respons.data;
     return data;
@@ -56,7 +56,7 @@ async function getRelatedVideos(movieId) {
   try {
     setLoader(BODY_SELECTOR);
     const respons = await axios.get(
-      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${TMDB_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${baseUrl}&language=en-US`
     );
     const data = await respons.data;
     return data;
