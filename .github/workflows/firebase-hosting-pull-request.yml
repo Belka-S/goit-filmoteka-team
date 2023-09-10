@@ -14,5 +14,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          # firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FILMOTEK_68_GOITSTUDENTS }}'
+          firebaseServiceAccount:
+            '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FILMOTEK_68_GOITSTUDENTS }}'
           projectId: filmotek-68-goitstudents
