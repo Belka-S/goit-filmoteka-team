@@ -21,6 +21,7 @@ import { islogin } from './js/services/islogin';
 import { load } from './js/services/library-storage';
 import { switchBTNs } from './js/services/swith-buttons';
 import './js/services/floating-buttons';
+
 window.addEventListener('load', removeGlobalLoader);
 refs.filmCardListEl.addEventListener('click', createFilmModal);
 getStateFromLS();
@@ -35,7 +36,7 @@ async function get(page) {
   startPage(STATE.totalResults);
   appendCardsMarkup(createCardMarkup(STATE.movies));
 
-// Велика картка
+  // Велика картка
 
   // appendCardsMarkup(createBigCardMarkup(STATE.movies));
 }

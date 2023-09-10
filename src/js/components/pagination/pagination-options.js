@@ -1,6 +1,6 @@
 export const paginDesktopOptions = {
   totalItems: 0,
-  itemsPerPage: 20,
+  itemsPerPage: 24,
   visiblePages: 7,
   page: 1,
   centerAlign: true,
@@ -28,7 +28,7 @@ export const paginDesktopOptions = {
 
 export const paginMobileOptions = {
   totalItems: 0,
-  itemsPerPage: 20,
+  itemsPerPage: 24,
   visiblePages: 3,
   page: 1,
   centerAlign: true,

@@ -34,13 +34,13 @@ export function startPage(date) {
 }
 
 async function loadMore(event) {
-  console.log(STATE.movies);
+  console.log(STATE);
 
   const currentPage = event.page;
   STATE.page = currentPage;
   const date = await differentFetch(STATE.page);
   STATE.movies = date.results;
-  console.log(STATE.movies);
+  // console.log(STATE.movies);
   galleryEl.innerHTML = '';
   appendCardsMarkup(createCardMarkup(STATE.movies));
 }

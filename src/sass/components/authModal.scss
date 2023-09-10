@@ -32,7 +32,7 @@ $button-active-blue: #1669f2;
 
 .login-with-google-btn {
   transition: background-color 200ms, box-shadow 200ms, color 200ms;
-  width: 200px;
+  width: 100%;
   padding: 14px 16px 15px 42px;
   border: 1px solid #ff6b01;
   border-radius: 5px;
@@ -172,7 +172,7 @@ $button-active-blue: #1669f2;
 }
 
 .form__btn-submit {
-  width: 200px;
+  width: 100%;
   display: block;
   margin-bottom: 20px;
   font-size: 15px;
@@ -197,7 +197,7 @@ $button-active-blue: #1669f2;
 
 .form__text {
   margin-top: 30px;
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .form__link {
