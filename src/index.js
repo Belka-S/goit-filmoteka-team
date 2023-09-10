@@ -52,6 +52,7 @@ function getStateFromLS() {
   switchBTNs(islogin(STATE.user.uid));
 }
 // -------------------------------------------------------------------------------------------- //
+
 // import { btnSwitcher } from './js/services/movie-operations';
 
 // btnSwitcher(true);

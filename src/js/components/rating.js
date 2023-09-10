@@ -2,14 +2,14 @@ const modal = document.getElementById('modal');
 const openModalBtn = document.getElementById('open-modal');
 const closeBtn = document.querySelector('.close-btn');
 const movieRating = document.querySelector('.movie-rating');
-const apiKey = '7f0dad748ff7b4eb073bc2aebbf95174';
+const { TMDB_API_KEY } = process.env;
 
 openModalBtn.addEventListener('click', () => {
   modal.style.display = 'block';
   const movieId = 129; // Заменить 123 на id фильма, данные которого нужно получить
 
   fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=en-US`
   )
     .then(response => response.json())
     .then(data => {
